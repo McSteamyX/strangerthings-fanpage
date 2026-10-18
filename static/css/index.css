@@ -120,3 +120,6 @@ footer{
         text-decoration: none;
         color: #f9ffdd;
     }
+    header{
+        width: 100%;
+    }
