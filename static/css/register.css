@@ -85,7 +85,7 @@
             background-color: black;
             padding: 20px;
             width: 100%;
-            
+            place-items: center;
         }
         @media (max-width:600px){
             body{
