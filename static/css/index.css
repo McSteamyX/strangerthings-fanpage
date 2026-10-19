@@ -61,24 +61,49 @@ p{
 }
 .navbar{
     display: flex;
-    flex-direction: left;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    min-width: 0;
+}
+.logo{
+    flex-shrink: 1;
+    min-width: 0;
 }
 .logo img{
+    width: clamp(25px, 5vw, 60px);
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10px;
 }
 .nav-links{
     display: flex;
     list-style-type: none;
-    gap: 70px;
-    margin: 0 auto;
-    padding: 28px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(1px, 1vw, 12px);
+    margin: 0;
+    padding: 2px;
+    flex-wrap: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+.nav-links li{
+    min-width: 0;
+    flex-shrink: 1;
 }
 .nav-links a{
     text-decoration: none;
     color: rgba(229,9,20,1);
     font-weight: bold;
+    font-size: clamp(7px, 1.1vw, 14px);
     transition: .3s;
-    padding: 10px;
+    padding: clamp(2px, 0.5vw, 8px);
+    white-space: nowrap;
+    display: block;
 }
 .nav-links a:hover{
  background-color: white;
@@ -91,7 +116,7 @@ p{
     padding: 10px;
     color: white;
     background: rgba(229,9,20,1);
-    border: 1px rgba(255,255,255,0.12);
+    border: none;
     width: 50%;
     margin-bottom: 20px;
    border: none;
@@ -110,16 +135,33 @@ footer{
         .nav-link{
     display: flex;
     list-style-type: none;
-    gap: 70px;
+    gap: clamp(5px, 2vw, 30px);
     margin: 0 auto;
-    padding: 28px;
+    padding: 10px;
     justify-content: center;
+    flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
 }
     .nav-link a{
         text-decoration: none;
         color: #f9ffdd;
     }
-    header{
-        width: 100%;
+    @media(max-width: 600px){
+        body{
+            padding: 8px;
+        }
+        .navbar{
+            gap: 2px;
+        }
+        .nav-links{
+            gap: 1px;
+            padding: 0;
+        }
+        .nav-links a{
+            font-size: clamp(6px, 2vw, 10px);
+            padding: 3px 2px;
+        }
+        .logo img{
+            width: clamp(20px,6vw,35px);
+        }
     }
