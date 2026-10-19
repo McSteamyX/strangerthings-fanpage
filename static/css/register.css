@@ -86,11 +86,15 @@
             padding: 20px;
             width: 100%;
             place-items: center;
-            max-width: 900px;
+            
         }
         @media (max-width:600px){
             body{
                 padding: 8px;
+            }
+            footer{
+                max-width: 600px;
+                width: 100%;
             }
         }
         
