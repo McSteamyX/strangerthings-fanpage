@@ -1,13 +1,16 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+        body{
     background-color: rgba(25,12,18,1);
     align-items: center;
     color: white;
     padding: 20px;
     margin: 0;
     text-align: center;
+        display: flex;
+        flex-direction: column;
+
         }
         img{
             width: 100%
@@ -16,9 +19,11 @@ body{
             margin: 0 auto;
             background-color: rgba(30,30,40,1);
            padding: 30px;
+           box-sizing: border-box;
             max-width: 380px;
             width: 100%;
             border-radius: 15px;
+            justify-items: center;
         
         }
         .input-group{
@@ -79,6 +84,13 @@ body{
         footer{
             background-color: black;
             padding: 20px;
+            width: 100%;
+            
+        }
+        @media (max-width:600px){
+            body{
+                padding: 8px;
+            }
         }
         
         
